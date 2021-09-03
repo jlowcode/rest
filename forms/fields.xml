@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+	<fields addfieldpath="/administrator/components/com_fabrik/models/fields" name="params">
+		<fieldset name="plg-form-rest" label="COM_FABRIK_OPTIONS">
+			<field
+				name="rest_list_id"
+				type="number"
+				label="PLG_FORM_REST_LIST_ID_LABEL"
+				repeat="true"
+				description="PLG_FORM_REST_LIST_ID_DESC"
+			/>
+
+			<field
+					name="rest_auxiliar_id"
+					type="listfields"
+					label="PLG_FORM_REST_AUXILIAR_ID_LABEL"
+					repeat="true"
+					description="PLG_FORM_REST_AUXILIAR_ID_DESC"
+			/>
+
+			<field
+				name="rest_elements_list"
+				type="fabrikmodalrepeat"
+				repeat="true"
+				description="PLG_FORM_REST_ELEMENTS_LIST_DESC"
+				label="PLG_FORM_REST_ELEMENTS_LIST_LABEL">
+				
+					<fields name="params">
+						<fieldset modal="true" name="rest_elements_list_modal" repeat="true">
+							<field name="rest_element_key"
+								type="text"
+								label="PLG_FORM_REST_ELEMENT_KEY_LABEL"
+							/>
+								
+							<field name="rest_element_value"
+								type="listfields"
+								valueformat="tableelement"
+								label="PLG_FORM_REST_ELEMENT_VALUE_LABEL"
+							/>
+								
+							<field name="rest_element_default"
+								type="text"
+								label="PLG_FORM_REST_ELEMENT_DEFAULT_LABEL"
+							/>
+								
+						</fieldset>
+					</fields>
+			</field>
+		</fieldset>
+		
+		<fieldset name="plg-form-rest-api" label="API">
+			<field name="api_url"
+				type="text"
+				repeat="true"
+				label="PLG_FORM_REST_API_URL_LABEL"
+				description="PLG_FORM_REST_API_URL_DESC"
+			/>
+			
+			<field name="api_key"
+				type="text"
+				repeat="true"
+				label="PLG_FORM_REST_API_KEY_LABEL"
+				description="PLG_FORM_REST_API_KEY_DESC"
+			/>
+
+			<field name="api_secret"
+				type="text"
+				repeat="true"
+				label="PLG_FORM_REST_API_SECRET_LABEL"
+				description="PLG_FORM_REST_API_SECRET_DESC"
+			/>
+		</fieldset>
+		
+	</fields>
+</form>
